@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+h1,
+h2,
+a,
+a:visited {
+  color: #444444;
+  user-select: none;
+}
+
+h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: #02a8f3;
+}
+
+h1,
+h2 {
+  animation: slide-leftToRight 1s ease-out 1;
+}
+
+.user-profile img {
+  width: 175px;
+  height: 250px;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-drag: none;
+
+  animation: slide-topToBottom 1.5s ease-out 1;
+}
+
+.user-profile {
+  transform-origin: top;
+  margin-bottom: 1rem;
+}
+
+.background-top-design {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url('https://semidotinfotech.com/web/images/frontend_banner.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  height: 380px;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.dev-pic,
+.personal-links {
+  animation: slide-leftToRight 1.5s ease-out 1;
+  display: none;
+}
+
+.dev-pic img {
+  width: 150px;
+}
+
+.personal-links {
+  margin-inline: 1rem;
+}
+
+.personal-links .bx {
+  color: #001044;
+  padding: 0.5rem;
+  margin: 3px 0.5rem;
+}
+
+.personal-links p {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 1224px) {
+  .dev-pic,
+  .personal-links {
+    display: block;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.card {
+  width: clamp(300px, 50%, 400px);
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-inline: 1rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.user-info {
+  text-align: center;
+}
+
+.info-links {
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+}
+
+.bx {
+  font-size: 2rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: #fff;
+  transition: color 0.5s ease, background-color 0.5s ease, padding 0.5s ease;
+}
+
+.bx:hover,
+a:focus > .bx {
+  color: #fff;
+  background-color: #444444;
+}
+
+/* .bx:active {
+  transition-duration: 60ms;
+  background-color: #8a8a8a;
+} */
+
+a {
+  border-radius: 20px;
+}
+
+a:focus-visible {
+  outline: 2px solid #444444;
+  outline-style: dashed;
+}
+
+li {
+  margin-inline: 0.3rem;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slide-bottomToTop 1s ease-out 1;
+}
+
+@media screen and (max-width: 688px) {
+  .bx {
+    padding: 0.8rem;
+  }
+}
+
+@keyframes slide-leftToRight {
+  from {
+    transform: translateX(-60rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-topToBottom {
+  from {
+    transform: translateY(-50rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+@keyframes slide-bottomToTop {
+  from {
+    transform: translateY(10rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+  }
+}
